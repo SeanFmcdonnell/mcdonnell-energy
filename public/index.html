@@ -26,6 +26,36 @@
     <link href="css/agency.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <!-- Start of Async Drift Code -->
+    <script>
+    "use strict";
+
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('ce3svre96fnp');
+    </script>
+    <!-- End of Async Drift Code -->
+
   </head>
 
   <body id="page-top">
@@ -47,9 +77,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Leadership</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -171,7 +201,7 @@
 
 
     <!-- Contact -->
-    <section id="contact">
+    <!-- <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -186,7 +216,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
